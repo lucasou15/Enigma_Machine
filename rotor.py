@@ -7,11 +7,12 @@
 
 class Rotor:
     #TODO: Insert params and attributes
-    def __init__(self, s):
+    def __init__(self, encoding, offset):
         """
         Creates an instance of Rotor
         """
-        self.writingSpec = s
+        self.writingSpec = encoding
+        self.offset = offset
     
     #TODO: Insert params
     def map_r_to_l(self):
@@ -20,18 +21,28 @@ class Rotor:
         """
     
     #TODO: Insert params
-    def map_l_to_r(self):
+    def map_l_to_r(self, c):
         """
-        Represents current flowing from left to right in the rotor
+        Represents current flowing from left to right in the rotor, returns encoding of c 
         """
-    #TODO: Insert params
-    def advance_rotor(self):
-        """
-        Simulates the stepping of the rotor after a mapping 
-        """
+        i = self.index(c)
+        
 
     #TODO: Insert params
-    def set_top_letter(self):
+    def set_offset(self, offset):
         """
         Allows user to set the top letter (starting position/offset) of the rotor
         """
+        self.offset = offset
+
+    def get_offset(self):
+        """
+        Return the current offset of the rotor
+        """
+        return self.offset
+
+    def index(self, c):
+        """
+        Return the index in the alphabet of c
+        """
+        return ord(c) - 97
