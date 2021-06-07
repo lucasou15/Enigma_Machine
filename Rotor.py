@@ -6,7 +6,6 @@ from helpers import *
 #############################################
 
 class Rotor:
-    #TODO: Insert params and attributes
     def __init__(self, encoding, offset):
         """
         Creates an instance of Rotor
@@ -14,7 +13,6 @@ class Rotor:
         self.writingSpec = encoding
         self.offset = offset
     
-    #TODO: Insert params
     def map_r_to_l(self, c):
         """
         Represents current flowing from right to left in the rotor
@@ -26,8 +24,6 @@ class Rotor:
         encoded_index = index(encoded) #index in alphabet of encoding of c
         return encoded_index
 
-    
-    #TODO: Insert params
     def map_l_to_r(self, c):
         """
         Represents current flowing from left to right in the rotor, returns encoding of c 
@@ -39,8 +35,6 @@ class Rotor:
         encoded_index = self.inverse_index(c_offset_char) #index in alphabet of encoding of c
         return encoded_index
         
-
-    #TODO: Insert params
     def set_offset(self, offset):
         """
         Allows user to set the top letter (starting position/offset) of the rotor
