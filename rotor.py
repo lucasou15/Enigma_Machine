@@ -1,4 +1,4 @@
-
+from helpers import *
 #############################################
 #    Defines Rotor class that represents    #
 #    the different rotors that can be used  #
@@ -56,14 +56,11 @@ class Rotor:
     def get_writingSpec(self):
         return self.writingSpec
 
-    def index(self, c):
-        """
-        Return the index in the alphabet of character c
-        """
-        return ord(c) - 65
 
     def inverse_index(self, c):
         """
         Return the index of c in the writingSpec of the rotor
         """
-        return self.writingSpec.index(c)
+        return self.writingSpec.index(c) 
+
+
