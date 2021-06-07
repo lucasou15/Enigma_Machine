@@ -1,6 +1,6 @@
 import unittest
 from Rotor import *
-
+from helpers import *
 VERBOSE = True
 
 class TestRotor(unittest.TestCase):

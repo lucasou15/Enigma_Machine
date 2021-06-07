@@ -20,10 +20,10 @@ class Rotor:
         Represents current flowing from right to left in the rotor
         """
         c = c.upper()
-        self.offset += 1 #Spin rotor once
-        i = (self.index(c) + self.offset)  % 26
+        self.offset = (self.offset + 1) % 26 #Spin rotor once
+        i = (index(c) + self.offset)  
         encoded = self.writingSpec[i] #encoded version of c according to the wiring specification of the rotor
-        encoded_index = self.index(encoded) #index in alphabet of encoding of c
+        encoded_index = index(encoded) #index in alphabet of encoding of c
         return encoded_index
 
     
@@ -33,7 +33,7 @@ class Rotor:
         Represents current flowing from left to right in the rotor, returns encoding of c 
         """
         c = c.upper()
-        c_index = self.index(c)
+        c_index = index(c)
         c_index += self.offset #add offset to the input contact
         c_offset_char = chr(c_index+65)
         encoded_index = self.inverse_index(c_offset_char) #index in alphabet of encoding of c
