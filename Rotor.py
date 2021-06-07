@@ -55,6 +55,4 @@ class Rotor:
         """
         Return the index of c in the writingSpec of the rotor
         """
-        return self.writingSpec.index(c) 
-
-
+        return self.writingSpec.index(c)
