@@ -1,0 +1,40 @@
+.keyboard{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    padding: 5px 0;
+    background: #004134;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+    height: 100px;
+}
+
+.keyboard_hidden{
+    bottom: -100%
+}
+
+.keyboard_keys{
+    text-align: center;
+}
+
+.keyboard_key{
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 4rem;
+    outline: none;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.keyboard_key:active{
+    color: gold;
+}

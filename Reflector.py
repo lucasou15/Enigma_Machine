@@ -11,4 +11,9 @@ class Reflector:
         """
         Encodes c according to the writing specification of the reflector
         """
-        return self.writingSpec[index(c.upper())]
+        encoded = self.writingSpec[index(c.upper())]
+        print("Encoding in reflector " + c + " becomes " + encoded)
+        return encoded
+
+    def get_writingSpec(self):
+        return self.writingSpec

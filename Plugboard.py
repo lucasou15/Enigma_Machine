@@ -5,8 +5,6 @@ from helpers import *
 #    switched in the enciphering process     #
 ##############################################
 
-class PlugBoard:
-    def __init__(self, pairs):
+class Plugboard:
+    def __init__(self):
         pass
-
-    
